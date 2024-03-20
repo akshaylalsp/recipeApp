@@ -8,6 +8,10 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 class MainViewModel : ViewModel() {
 
+    init {
+        fetchData()
+    }
+
     private var _categoriesState = mutableStateOf(RecipeState())
     val categoriesState : State<RecipeState> = _categoriesState
     data class RecipeState(
